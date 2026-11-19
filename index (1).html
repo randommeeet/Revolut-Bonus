@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d19">
+  <meta name="description" content="Nezávislý průvodce aktuální doporučovací akcí Revolut. Informace o podmínkách, registraci a odměně.">
+  <title>Revolut BONUS – průvodce akcí</title>
+  <style>
+    :root{--bg:#080d19;--panel:#101a2d;--panel2:#14213a;--blue:#397bff;--blue2:#1758e8;--text:#f5f7ff;--muted:#aab7d0;--line:#263653;--green:#53d6a0}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(ellipse at 75% -10%,#17366b 0,transparent 38%),var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:inherit} .wrap{width:min(1080px,calc(100% - 36px));margin:auto}
+    header{padding:22px 0;border-bottom:1px solid #ffffff12}.nav{display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.2px}.logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#5b94ff,#1454e8);display:grid;place-items:center;box-shadow:0 8px 28px #2166ff55}.logo svg{width:22px}
+    .navlinks{display:flex;gap:22px;color:var(--muted);font-size:14px}.navlinks a{text-decoration:none}.navlinks a:hover{color:white}
+    .hero{padding:76px 0 54px;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:#b9d0ff;background:#1a3768;border:1px solid #31589a;padding:7px 12px;border-radius:99px;font-size:13px;font-weight:700}.dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green)}
+    h1{font-size:clamp(40px,6vw,66px);line-height:1.04;letter-spacing:-2.4px;margin:20px 0 18px}.gradient{background:linear-gradient(90deg,#fff,#8eb8ff 72%);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:18px;color:var(--muted);max-width:620px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 20px;border-radius:13px;text-decoration:none;font-weight:800;border:1px solid transparent;cursor:pointer;font-size:15px}.primary{background:linear-gradient(135deg,#4386ff,#1758e8);color:white;box-shadow:0 12px 30px #1458e844}.secondary{background:#ffffff0b;border-color:#ffffff20;color:#eaf0ff}.btn:hover{transform:translateY(-1px);filter:brightness(1.08)}
+    .reward{background:linear-gradient(145deg,#172b4c,#101a2d 70%);border:1px solid #36517c;border-radius:24px;padding:28px;box-shadow:0 25px 80px #0005;position:relative;overflow:hidden}.reward:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;background:#2872ff24;filter:blur(5px);right:-65px;top:-65px}.small{font-size:12px;letter-spacing:1.2px;color:#aebfdb;font-weight:800}.amount{font-size:52px;line-height:1.15;font-weight:900;letter-spacing:-2px;margin:10px 0}.reward p{color:var(--muted);margin:0}.note{font-size:12px;color:#8fa0bd;margin-top:16px}
+    section{padding:32px 0 54px}.section-head{margin-bottom:22px}.section-head h2{font-size:30px;letter-spacing:-.8px;margin:0 0 7px}.section-head p{color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(180deg,#111d32,#0e1728);border:1px solid var(--line);border-radius:18px;padding:22px}.num{width:36px;height:36px;display:grid;place-items:center;background:#1c3d78;color:#bcd3ff;border-radius:11px;font-weight:900;margin-bottom:15px}.card h3{margin:0 0 8px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px}
+    .countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}.timebox{background:#0b1425;border:1px solid #2a4167;border-radius:14px;padding:14px 8px;text-align:center}.timebox strong{display:block;font-size:28px;line-height:1.2;font-variant-numeric:tabular-nums}.timebox span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+    .banner{background:linear-gradient(110deg,#142c53,#101a2d);border:1px solid #315184;border-radius:22px;padding:26px;display:flex;justify-content:space-between;gap:22px;align-items:center}.banner h2{margin:0 0 6px}.banner p{margin:0;color:var(--muted);font-size:14px}
+    .faq{display:grid;gap:10px}details{background:#101a2d;border:1px solid var(--line);border-radius:14px;padding:17px 19px}summary{cursor:pointer;font-weight:750}details p{color:var(--muted);margin:12px 0 0;font-size:14px}
+    .disclaimer{border:1px solid #6b572c;background:#2a2315;color:#e9d9b1;border-radius:14px;padding:16px;font-size:13px;margin-top:24px}
+    footer{border-top:1px solid #ffffff14;padding:28px 0 42px;color:#8796b1;font-size:13px}.footerrow{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;padding:52px 0 34px;gap:28px}.navlinks{display:none}.grid{grid-template-columns:1fr}.banner{display:block}.banner .btn{margin-top:18px}.amount{font-size:46px}section{padding:26px 0 40px}}
+  </style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#" style="text-decoration:none"><span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 8h16M4 12h12M4 16h9"/></svg></span> REVOLUT <span style="color:#70a4ff">BONUS</span></a>
+  <nav class="navlinks"><a href="#jak">Jak to funguje</a><a href="#postup">Postup</a><a href="#faq">FAQ</a></nav>
+  <a class="btn secondary" href="#registrace" style="padding:10px 14px;font-size:13px">Zapojit se</a>
+</div></header>
+<main>
+  <div class="wrap hero">
+    <div>
+      <span class="eyebrow"><span class="dot"></span> Průvodce doporučovací akcí</span>
+      <h1>Objev, jak funguje <span class="gradient">Revolut BONUS.</span></h1>
+      <p class="lead">Přehledný návod k doporučovací akci: zjisti, jak se zapojit, kde najít podmínky a co je potřeba dokončit, aby bylo doporučení uznáno.</p>
+      <div class="actions"><a class="btn primary" href="#registrace">Zobrazit registrační odkaz <span aria-hidden="true">→</span></a><a class="btn secondary" href="#postup">Jak postupovat</a></div>
+      <p class="note">Nezávislá informační stránka. Nejsme oficiální web Revolutu.</p>
+    </div>
+    <aside class="reward">
+      <div class="small">ODMĚNA ZA ÚSPĚŠNÉ DOPORUČENÍ</div>
+      <div class="amount">1 500 Kč</div>
+      <p>Výše odměny uváděná v konkrétní nabídce doporučení. Nárok a vyplacení závisí na splnění podmínek zobrazených v aplikaci Revolut.</p>
+      <div class="note">Odměna je určena doporučujícímu, pokud to potvrzují podmínky tvé nabídky. Nový zákazník nemusí automaticky získat 1 500 Kč.</div>
+    </aside>
+  </div>
+
+  <section id="jak"><div class="wrap">
+    <div class="section-head"><h2>Jak to funguje?</h2><p>Jednoduchý přehled před registrací.</p></div>
+    <div class="grid">
+      <article class="card"><div class="num">01</div><h3>Otevři pozvánku</h3><p>Použij osobní doporučovací odkaz na této stránce. Registraci začni právě přes něj.</p></article>
+      <article class="card"><div class="num">02</div><h3>Dokonči požadované kroky</h3><p>V aplikaci Revolut si otevři nabídku a pečlivě splň všechny kroky a termíny, které se ti zobrazí.</p></article>
+      <article class="card"><div class="num">03</div><h3>Počkej na ověření</h3><p>Revolut musí splnění podmínek potvrdit. Odměna není automatická a řídí se pravidly konkrétní akce.</p></article>
+    </div>
+  </div></section>
+
+  <section id="termin"><div class="wrap">
+    <div class="banner">
+      <div><h2>Čas na zapojení se krátí</h2><p>Uvedený termín akce: 8. prosince 2026, 20:59 GMT (21:59 českého času).</p></div>
+      <div class="countdown" aria-label="Odpočet do konce akce">
+        <div class="timebox"><strong id="days">--</strong><span>Dní</span></div>
+        <div class="timebox"><strong id="hours">--</strong><span>Hodin</span></div>
+        <div class="timebox"><strong id="minutes">--</strong><span>Minut</span></div>
+        <div class="timebox"><strong id="seconds">--</strong><span>Sekund</span></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section id="postup"><div class="wrap">
+    <div class="section-head"><h2>Návod krok za krokem</h2><p>Postupuj podle aktuálních pokynů, které ti Revolut ukáže v aplikaci.</p></div>
+    <div class="card" style="padding:26px">
+      <ol style="padding-left:22px;margin:0">
+        <li style="padding:0 0 12px"><strong>Klikni na tlačítko „Přejít na Revolut“.</strong> Otevře se osobní doporučovací odkaz.</li>
+        <li style="padding:0 0 12px"><strong>Založ si účet podle instrukcí v aplikaci.</strong> Pokud už účet máš, ověř si, zda se můžeš akce účastnit.</li>
+        <li style="padding:0 0 12px"><strong>Otevři nabídku doporučení.</strong> Zkontroluj všechny požadované kroky, termíny a případné limity.</li>
+        <li style="padding:0 0 12px"><strong>Dokonči každý požadovaný krok včas.</strong> Nespoléhej na tento obecný návod; rozhodující jsou podmínky přímo v aplikaci.</li>
+        <li><strong>Vyčkej na potvrzení.</strong> Stav doporučení a případnou odměnu ověř v aplikaci Revolut.</li>
+      </ol>
+    </div>
+  </div></section>
+
+  <section id="registrace"><div class="wrap">
+    <div class="banner">
+      <div><h2>Chceš pokračovat?</h2><p>Otevři svůj osobní doporučovací odkaz a přečti si podmínky nabídky přímo v Revolutu.</p></div>
+      <a class="btn primary" target="_blank" rel="noopener noreferrer" href="https://revolut.com/referral/?referral-code=stepanek27!NOV2-26-AR-H1-GIVA-CZ&geo-redirect">Přejít na Revolut ↗</a>
+    </div>
+    <p class="note">Odkaz je doporučovací odkaz vlastníka této stránky. Před pokračováním si ověř, že nabídka a její podmínky odpovídají tomu, co hledáš.</p>
+  </div></section>
+
+  <section id="faq"><div class="wrap">
+    <div class="section-head"><h2>Časté otázky</h2><p>Nejdůležitější informace na jednom místě.</p></div>
+    <div class="faq">
+      <details><summary>Kdo získá odměnu 1 500 Kč?</summary><p>Podle textu nabídky, který jsi poskytl, získává odměnu za doporučení osoba, která pozvala přítele, pokud přítel dokončí požadované kroky. Nově registrovaný člověk tedy nemusí automaticky dostat 1 500 Kč. Rozhodující je přesné znění tvé nabídky v aplikaci.</p></details>
+      <details><summary>Stačí jen kliknout na odkaz a zaregistrovat se?</summary><p>Ne! V aplikaci jsou další požadované kroky, které musíš splnit. Zkontroluj celý seznam podmínek v nabídce a dokonči jej v uvedeném termínu.</p></details>
+      <details><summary>Do kdy je potřeba podmínky splnit?</summary><p>Podmínky je potřeba splnit do 8. prosince do 21:59 (českého času).</p></details>
+      <details><summary>Je tato stránka oficiální stránkou Revolutu?</summary><p>Ne. Jde jen o to, aby v tom byl přehled. Stránku jsem vytvořil já, majitel.</p></details>
+      <details><summary>Je registrace přes odkaz zpoplatněná?</summary><p>Ne, registrace přes odkaz i tato stránka jsou zdarma. Pokud by podmínky akce v aplikaci vyžadovaly něco navíc (např. platbu), uvidíš to tam předem, vždy si je přečti.</p></details>
+    </div>
+    <div class="disclaimer"><strong>Důležité upozornění:</strong> Tato stránka není provozována, schválena ani podporována společností Revolut. Nezaručuje získání odměny ani výhru v soutěži. Platí výhradně oficiální podmínky zobrazené v aplikaci Revolut. Nikdy zde nezadávej přihlašovací údaje, heslo, PIN ani údaje o platební kartě.</div>
+  </div></section>
+
+  <section><div class="wrap" style="text-align:center">
+    <h2 style="margin:0 0 10px">Pošli průvodce dál</h2><p style="color:var(--muted);margin:0 0 18px">Sdílej informační stránku s lidmi, které by mohla zajímat.</p>
+    <div class="actions" style="justify-content:center"><button class="btn secondary" id="shareBtn">Sdílet stránku ↗</button><button class="btn secondary" id="copyBtn">Kopírovat adresu</button></div>
+    <p id="shareStatus" class="note" aria-live="polite"></p>
+  </div></section>
+</main>
+<footer><div class="wrap footerrow"><span>© 2026 Revolut BONUS · Nezávislý průvodce</span><span>Informace se mohou změnit. Vždy ověř aktuální podmínky u Revolutu.</span></div></footer>
+<script>
+  // Termín zadaný uživatelem: 8. 12. 2026, 20:59 GMT.
+  const deadline = new Date('2026-12-08T20:59:00Z').getTime();
+  const ids = ['days','hours','minutes','seconds'];
+  function updateCountdown(){
+    let diff = deadline - Date.now();
+    if(diff <= 0){ ids.forEach(id => document.getElementById(id).textContent='0'); document.querySelector('.countdown').insertAdjacentHTML('afterend','<p class="note">Uvedený termín již uplynul. Ověř aktuální stav akce v aplikaci Revolut.</p>'); clearInterval(timer); return; }
+    const values=[Math.floor(diff/86400000),Math.floor(diff/3600000)%24,Math.floor(diff/60000)%60,Math.floor(diff/1000)%60];
+    ids.forEach((id,i)=>document.getElementById(id).textContent=String(values[i]).padStart(2,'0'));
+  }
+  updateCountdown(); const timer=setInterval(updateCountdown,1000);
+  const status=document.getElementById('shareStatus');
+  document.getElementById('shareBtn').addEventListener('click',async()=>{
+    const data={title:document.title,text:'Praktický průvodce doporučovací akcí Revolut BONUS.',url:location.href};
+    try{if(navigator.share) await navigator.share(data);else{await navigator.clipboard.writeText(location.href);status.textContent='Adresa stránky byla zkopírována.';}}catch(e){if(e.name!=='AbortError')status.textContent='Sdílení se nepodařilo. Zkopíruj adresu stránky ručně.';}
+  });
+  document.getElementById('copyBtn').addEventListener('click',async()=>{
+    try{await navigator.clipboard.writeText(location.href);status.textContent='Adresa stránky byla zkopírována.';}catch(e){status.textContent='Kopírování není dostupné. Zkopíruj adresu z adresního řádku.';}
+  });
+</script>
+</body>
+</html>
