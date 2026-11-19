@@ -21,6 +21,9 @@
     .faq{display:grid;gap:10px}details{background:#101a2d;border:1px solid var(--line);border-radius:14px;padding:17px 19px}summary{cursor:pointer;font-weight:750}details p{color:var(--muted);margin:12px 0 0;font-size:14px}
     .disclaimer{border:1px solid #6b572c;background:#2a2315;color:#e9d9b1;border-radius:14px;padding:16px;font-size:13px;margin-top:24px}
     footer{border-top:1px solid #ffffff14;padding:28px 0 42px;color:#8796b1;font-size:13px}.footerrow{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    #enter{position:fixed;inset:0;z-index:100;background:rgba(8,13,25,.94);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;cursor:pointer;transition:opacity .35s ease,visibility .35s}#enter.hide{opacity:0;visibility:hidden;pointer-events:none}
+    .enterbox{display:flex;flex-direction:column;gap:10px;align-items:center;max-width:380px;background:linear-gradient(145deg,#172b4c,#101a2d 70%);border:1px solid #36517c;border-radius:24px;padding:34px 28px;box-shadow:0 25px 80px #0008;animation:pulse 2s ease-in-out infinite}.enterbox strong{font-size:26px;letter-spacing:-.5px}.enterbox span{color:var(--muted);font-size:16px}.enterbox small{color:#8fa0bd;font-size:12px;margin-top:6px}.enteremoji{font-size:44px;line-height:1}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
     #musicBtn{position:fixed;right:14px;bottom:14px;z-index:50;background:#14213aee;color:#eaf0ff;border:1px solid #36517c;border-radius:99px;padding:10px 16px;font:700 13px/1 inherit;cursor:pointer;backdrop-filter:blur(8px);box-shadow:0 8px 24px #0006}#musicBtn:hover{filter:brightness(1.15)}
     @media(max-width:760px){.hero{grid-template-columns:1fr;padding:52px 0 34px;gap:28px}.navlinks{display:none}.grid{grid-template-columns:1fr}.banner{display:block}.banner .btn{margin-top:18px}.amount{font-size:46px}section{padding:26px 0 40px}}
   </style>
@@ -28,6 +31,14 @@
 <body>
 <audio id="music" src="music.mp3" loop preload="auto"></audio>
 <button id="musicBtn" aria-label="Zapnout nebo vypnout hudbu">🎵 Hudba: zapnout</button>
+<div id="enter" role="dialog" aria-label="Spustit hudbu" tabindex="0">
+  <div class="enterbox">
+    <div class="enteremoji">🎵</div>
+    <strong>Klikni kamkoliv</strong>
+    <span>a spustí se hudba pro pohodlné čtení a registraci</span>
+    <small>Hudbu můžeš kdykoliv vypnout tlačítkem vpravo dole.</small>
+  </div>
+</div>
 <header><div class="wrap nav">
   <a class="brand" href="#" style="text-decoration:none"><span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 8h16M4 12h12M4 16h9"/></svg></span> REVOLUT <span style="color:#70a4ff">BONUS</span></a>
   <nav class="navlinks"><a href="#jak">Jak to funguje</a><a href="#postup">Postup</a><a href="#faq">FAQ</a></nav>
@@ -124,7 +135,15 @@
     if(music.paused){userPaused=false;music.play().then(musicLabel).catch(()=>{});}
     else{userPaused=true;music.pause();musicLabel();}
   });
-  music.addEventListener('error',()=>{musicBtn.style.display='none';});
+  const enter=document.getElementById('enter');
+  function closeEnter(){
+    enter.classList.add('hide');
+    userPaused=false;
+    music.play().then(musicLabel).catch(()=>{});
+  }
+  enter.addEventListener('click',closeEnter);
+  enter.addEventListener('keydown',closeEnter);
+  music.addEventListener('error',()=>{musicBtn.style.display='none';enter.classList.add('hide');});
   music.addEventListener('play',musicLabel); music.addEventListener('pause',musicLabel);
 
   // Termín zadaný uživatelem: 8. 12. 2026, 20:59 GMT.
